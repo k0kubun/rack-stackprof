@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Takashi Kokubun']
   spec.email         = ['takashikkbn@gmail.com']
 
-  spec.summary       = %q{Periodically dump StackProf profile result to /tmp with easy-to-understand filename}
-  spec.description   = %q{Periodically dump StackProf profile result to /tmp with easy-to-understand filename}
+  spec.summary       = %q{Periodically dump StackProf profile result to tmp directory with easy-to-understand filename}
+  spec.description   = %q{Periodically dump StackProf profile result to tmp directory with easy-to-understand filename}
   spec.homepage      = 'https://github.com/k0kubun/rack-stackprof'
   spec.license       = 'MIT'
 
