@@ -36,8 +36,8 @@ class Rack::Stackprof
     StackProf.stop
     finished_at = Process.clock_gettime(Process::CLOCK_MONOTONIC, :float_microsecond)
 
-    filename = result_filename(env: env, duration_milliseconds: (finished_at - started_at) / 1000)
-    StackProf::Middleware.save(filename)
+    StackProf::Middleware.path = result_filename(env: env, duration_milliseconds: (finished_at - started_at) / 1000)
+    StackProf::Middleware.save
   end
 
   # ex: "stackprof-20171004_175816-41860-GET_v1_users-0308ms.dump"
