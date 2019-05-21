@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    rack-stackprof (0.1.0)
-      stackprof
+    rack-stackprof (0.2.0)
+      stackprof (>= 0.2.12)
 
 GEM
   remote: https://rubygems.org/
   specs:
     rake (12.3.0)
-    stackprof (0.2.11)
+    stackprof (0.2.12)
 
 PLATFORMS
   ruby
@@ -19,4 +19,4 @@ DEPENDENCIES
   rake
 
 BUNDLED WITH
-   1.16.1.pre1
+   1.17.2
