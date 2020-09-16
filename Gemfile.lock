@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    rack-stackprof (0.2.0)
+    rack-stackprof (0.2.1)
       stackprof (>= 0.2.12)
 
 GEM
   remote: https://rubygems.org/
   specs:
     rake (12.3.0)
-    stackprof (0.2.12)
+    stackprof (0.2.15)
 
 PLATFORMS
   ruby
