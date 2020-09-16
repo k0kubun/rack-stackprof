@@ -7,7 +7,7 @@ class Rack::Stackprof
     @profile_interval_seconds = options.fetch(:profile_interval_seconds)
     @sampling_interval_microseconds = options.fetch(:sampling_interval_microseconds)
     @last_profiled_at = nil
-    StackProf::Middleware.path = options.fetch(:result_directory) # for `StackProf::Middleware.save`
+    @result_directory = options.fetch(:result_directory) # for `StackProf::Middleware.save`
   end
 
   def call(env)
@@ -36,7 +36,7 @@ class Rack::Stackprof
     StackProf.stop
     finished_at = Process.clock_gettime(Process::CLOCK_MONOTONIC, :float_microsecond)
 
-    StackProf::Middleware.path = result_filename(env: env, duration_milliseconds: (finished_at - started_at) / 1000)
+    StackProf::Middleware.path = File.join(@result_directory, result_filename(env: env, duration_milliseconds: (finished_at - started_at) / 1000))
     StackProf::Middleware.save
   end
 
